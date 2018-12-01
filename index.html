@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Truck Locator|rio SEO</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link href="styles/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvjMP72tvD9lezXst-kmx_s_xXU8EOfzg"></script>
+        <script type="text/javascript" src="scripts/scripts.js"></script>
+    </head>
+    <body>
+      <div class="header">
+        <div class="alignleft">
+          <img src="./assets/rioseo-logo.png">
+        </div>
+		    <div class="alignright">
+          <a class="menu-link" href="">Menu</a>
+          <img class="location-icon" src="./assets/location-icon.png">
+          <a class="truck-locator" href="">Truck Locator</a>
+        </div>
+		    <div style="clear: both;"></div>
+	    </div>
+
+      <div class="mobile_nav">
+        <div class="menu-icon">
+          <div class="menu"></div>
+          <div class="menu"></div>
+          <div class="menu"></div>
+        </div>
+        <img class="mobile-logo" src="./assets/rioseo-logo-mobile.png" />
+        <img class="location-logo" src="./assets/location-icon.png" />
+      </div>
+
+      <div class="container">
+        <h4 class="container-title"></h4>
+        <div class="left"></div>
+
+        <div class="right">
+          <div id="map">
+          <p class="init">Click a location card to load a map</p>
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="infoModal" role="dialog" data-backdrop="false">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                  <p class="name" style="font-weight: bold"></p>
+                  <p class="address"></p>
+                  <div class="row">
+                    <div class="col-md-6"><img class="phone-icon" src="./assets/phone-icon.png"><a class ="phone" style="color:orange">(123)456-7890</a></div>
+                    <div class="col-md-6"><img class="phone-icon" src="./assets/direction-icon.png"><a class ="directions" target="_blank" style="color:orange">Get Directions</a></div>
+                  </div>
+                  <br />
+                  <div class="schedule">
+                    <table class="table borderless">
+                      <tbody>
+                        <tr>
+                          <td>Monday</td>
+                          <td class="monday"></td>
+                        </tr>
+                        <tr>
+                          <td>Tuesday</td>
+                          <td class="tuesday"></td>
+                        </tr>
+                        <tr>
+                          <td>Wednesday</td>
+                          <td class="wednesday"></td>
+                        </tr>
+                        <tr>
+                          <td>Thursday</td>
+                          <td class="thursday"></td>
+                        </tr>
+                        <tr>
+                          <td>Friday</td>
+                          <td class="friday"></td>
+                        </tr>
+                        <tr>
+                          <td>Saturday</td>
+                          <td class="saturday"></td>
+                        </tr>
+                        <tr>
+                          <td>Sunday</td>
+                          <td class="sunday"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <a class="btn btn-dark btn-lg btn-block" target="_blank">VIEW FULL DETAILS</a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer">
+        <button type="button" class="footer-left-btn" onclick="show_list()">List</button>
+        <button type="button" class="footer-right-btn" onclick="show_map()">Map</button>
+      </div>
+
+    </body>
+</html>

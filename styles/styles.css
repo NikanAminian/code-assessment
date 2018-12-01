@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.header {
+  width: 870px;
+	margin: 90px auto;
+}
+
+.alignleft {
+	float: left;
+  padding-left: 3%;
+}
+
+.alignright {
+	float: right;
+  padding-right: 3%;
+}
+
+.mobile_nav{
+  display: none;
+}
+
+.menu {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px;
+}
+
+.menu-icon {
+  display: inline-block;
+  padding-top: 4%;
+}
+
+.footer {
+  display: none;
+}
+
+.container {
+  margin: auto;
+  width: 850px;
+  height: 600px;
+}
+
+.left {
+  float: left;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+  border-style: solid;
+  border-color: #e6e6e6;
+  border-width: thin;
+}
+
+.right {
+  float: right;
+  width: 50%;
+  height: 100%;
+  background-color: #b3b3b3;
+  position: relative;
+}
+
+.map-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+  z-index: 1;
+}
+
+.phone-icon {
+  width: auto;
+  height: auto;
+}
+
+a.menu-link {
+  padding-right: 30px;
+  color: #666666;
+}
+
+a.truck-locator {
+  color: #666666;
+}
+
+a.button:hover, a.button:active {
+    color: #e6e6e6;
+    text-decoration: none;
+    display: inline-block;
+}
+
+img.location-icon {
+  width: 9%;
+  height: 7%;
+}
+
+img.mobile-logo {
+  display: inline-block;
+  margin-left: 35%;
+  padding-bottom: 5%;
+}
+
+img.location-logo {
+   filter: invert(1);
+   display: inline-block;
+   margin-left: 35%;
+   padding-bottom: 5%;
+}
+
+.card {
+  width: 380px;
+  height: auto;
+  padding: 10px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.card:hover{
+  background-color: #f2f2f2;
+}
+
+p.card-info {
+  padding-left: 20px;
+  color: #4d4d4d;
+  line-height: 100%;
+}
+
+p.init {
+  text-align: center;
+  position: relative;
+  top: 50%;
+}
+
+h4.container-title {
+  color:#4d4d4d;
+}
+
+.button {
+  background-color: #4d4d4d;
+  border: none;
+  border-radius: 5px;
+  color: #e6e6e6;
+  padding: 8px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.btn-wrapper{
+  text-align: center;
+}
+
+.distance {
+  position:absolute;
+  top:0;
+  right:0;
+  width: auto;
+  height: auto;
+  border:none;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.table {
+  line-height: 50%;
+}
+
+.borderless td, .borderless th {
+    border: none;
+}
+
+
+/* Mobile styles */
+@media screen and (max-width: 768px)  {
+  .header{
+    display: none;
+  }
+  .right{
+    display: none;
+  }
+  .mobile_nav{
+    display: block;
+    background-color: #4d4d4d;
+  }
+  .container {
+    width: 100%;
+    height: 550px;
+  }
+  h4.container-title {
+    font-size: 20px;
+  }
+  .left{
+    margin: 0px auto;
+    width: 100%;
+    height: 85%;
+    overflow: auto;
+    z-index: 1;
+    position: relative;
+  }
+  .card {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .button{
+    padding: 6px 20px;
+  }
+  .footer {
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    color: white;
+    text-align: center;
+  }
+  .footer-left-btn{
+    background-color: orange;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 3% 20%;
+    font-size: 13px;
+  }
+  .footer-right-btn{
+    background-color: white;
+    color: orange;
+    border-color: orange;
+    text-align: center;
+    padding: 3% 20%;
+    font-size: 13px;
+  }
+  .right{
+    left: 0;
+    top: 8%;
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    z-index: 3;
+    float: none;
+  }
+
+}
